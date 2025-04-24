@@ -27,36 +27,34 @@ nav{
 }
 .logo:hover{
     width: 180px;
-    height: auto;
-    border-radius: 10px;    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                0 0 20px rgba(255, 255, 255, 0.3), 
-                0 0 30px rgba(255, 255, 255, 0.1);
-    animation: glow 2s infinite;
+    height: auto; 
+    animation: glow 2s;
+    
 }
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
                     0 0 20px rgba(255, 255, 255, 0.3), 
                     0 0 30px rgba(255, 255, 255, 0.1);
+        
     }
     50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1), 
-                    0 0 40px rgba(255, 255, 255, 0.6), 
-                    0 0 60px rgba(255, 255, 255, 0.3);
-       transform: rotate(1440deg);
+        box-shadow: 0 0 20px rgb(218, 23, 185), 
+                    0 0 40px rgba(233, 45, 202, 0.6), 
+                    0 0 60px rgba(201, 25, 171, 0.3);
+        transform: translate(50%);
     }
-    75% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-                    0 0 20px rgba(255, 255, 255, 0.3), 
-                    0 0 30px rgba(255, 255, 255, 0.1);
+    100% {
+        box-shadow: 0 0 10px rgba(47, 199, 34, 0.5), 
+                    0 0 20px rgba(33, 202, 41, 0.3), 
+                    0 0 30px rgba(45, 236, 45, 0.1);
+    
+        
     }
-    100%{
-        width:180px;
-        cursor: pointer;
-        border-radius: 50%;
-        opacity: 80%
+}
+.content h1 span:hover{
+    transition: ease-in-out;
 
-    }
 }
 nav ul {
     list-style: none;
@@ -67,22 +65,31 @@ nav ul {
 nav ul li{
     display: inline-block;
     margin: 10px 20px;
-
+}
+nav ul li:hover{
+    transform: scale(120%);
+    /* transform: skewX(10deg); */
 }
 nav ul li a{
     color:#fff;
     text-decoration: none;
+    transition: 1s;
+    
 }
 nav ul li a:hover{
     color:#ea1538;
-    transition:1s;
+    background-color: antiquewhite;
   }
 
 .content{
-    margin-top: 7%;
+    margin-top: 4%;
     color: #fff;
     max-width:620px;
 }
+.red{
+    color:red;
+}
+
 .content h1{
     font-size:40px;
     font-weight:600;
@@ -90,6 +97,22 @@ nav ul li a:hover{
     margin-bottom: 25px;
 
 }
+.content h1:hover{
+    animation: move 2s;
+    
+}
+@keyframes move{
+    0%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 .content form{
     display:flex;
     align-items: center;
@@ -127,6 +150,10 @@ nav ul li a:hover{
 }
 .follow ul li img{
     width: 2em;
-}
+    border-radius: 50%;
+} 
+.follow ul li img:hover{
+   transform: scale(120%);
+} 
 
 
